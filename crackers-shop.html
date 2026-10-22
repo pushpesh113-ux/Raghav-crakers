@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raghav Crackers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF4E6; --surface:#FFFFFF; --ink:#1B1245; --muted:#554A7A; --line:#F0D9BC;
+  --red:#C8102E; --gold:#FFB400; --hero:#1B1245; --hero-ink:#FFF4E6; --link:#C8102E;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#120C33; --surface:#1D1550; --ink:#FFF0DC; --muted:#BDB2E0; --line:#33276F;
+    --hero:#0B0724; --hero-ink:#FFF4E6; --link:#FFB400; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#120C33; --surface:#1D1550; --ink:#FFF0DC; --muted:#BDB2E0; --line:#33276F;
+  --hero:#0B0724; --hero-ink:#FFF4E6; --link:#FFB400; color-scheme: dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind",system-ui,sans-serif;font-size:17px;line-height:1.6;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:"Bowlby One","Arial Black",Impact,sans-serif;font-weight:400;line-height:1.1;margin:0}
+a{color:var(--link)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.hero{background:var(--hero);color:var(--hero-ink);overflow:hidden;position:relative}
+.hero .wrap{display:grid;gap:28px;padding-top:20px;padding-bottom:56px;position:relative;z-index:1}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-family:"Bowlby One","Arial Black",sans-serif;font-size:18px;color:var(--gold);text-decoration:none}
+.bar a.tel{color:var(--hero-ink);font-weight:600;text-decoration:none;border:2px solid var(--gold);padding:6px 14px;border-radius:999px}
+.burst{position:absolute;right:-140px;top:60px;width:520px;height:520px;border-radius:50%;opacity:.22;
+  background:repeating-conic-gradient(var(--gold) 0 7.5deg, var(--red) 7.5deg 15deg);
+  -webkit-mask:radial-gradient(circle,transparent 0 22%,#000 23%);mask:radial-gradient(circle,transparent 0 22%,#000 23%);
+  animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.burst{animation:none}}
+.hero h1{font-size:clamp(40px,10vw,78px);max-width:11ch;color:var(--gold)}
+.hero h1 em{font-style:normal;color:#fff}
+.hero p{max-width:44ch;font-size:19px;margin:0}
+.hindi{font-size:20px;font-weight:600}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:600;font-size:17px;text-decoration:none}
+.btn.main{background:var(--gold);color:#1B1245}
+.btn.alt{border:2px solid var(--hero-ink);color:var(--hero-ink)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.addr{margin:0;font-weight:600;color:var(--hero-ink)}
+.cb{display:flex;align-items:center;gap:12px;background:var(--gold);color:#1B1245;padding:8px 18px 8px 10px;border-radius:999px;width:fit-content;font-family:"Bowlby One","Arial Black",sans-serif;font-size:18px;line-height:1.1}.cb svg{width:46px;height:46px;flex:none}.cb small{display:block;font-family:"Hind",system-ui,sans-serif;font-size:13px;font-weight:600}
+.sale{display:inline-block;background:var(--red);color:#fff;font-weight:600;padding:6px 14px;border-radius:6px;width:fit-content}
+.shop{display:block;width:100%;height:auto;border-radius:14px;border:2px solid var(--ink)}
+section{padding:52px 0}
+section h2{font-size:clamp(26px,5vw,36px);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:54ch}
+.grid{display:grid;gap:14px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
+.item{background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:5px 5px 0 var(--gold)}
+.item h3{font-size:19px;margin-bottom:6px}
+.item .hi{color:var(--red);font-weight:600;font-size:15px;margin:0 0 6px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .item .hi{color:var(--gold)}}
+.item p{margin:0;color:var(--muted)}
+.combos{display:grid;gap:14px}
+@media(min-width:700px){.combos{grid-template-columns:repeat(3,1fr)}}
+.combo{background:var(--red);color:#fff;border-radius:14px;padding:22px}
+.combo h3{font-size:22px;color:var(--gold);margin-bottom:6px}
+.combo p{margin:0 0 12px}
+.combo a{color:#fff;font-weight:600}
+.safe{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.safe ul{margin:10px 0 0;padding-left:20px}
+.safe li{margin:6px 0}
+.contact{display:grid;gap:16px}
+@media(min-width:700px){.contact{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{margin:4px 0}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="burst" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top">Raghav Crackers</a>
+      <a class="tel" href="tel:+910000000000">Call us</a>
+    </div>
+    <div class="cb"><svg viewBox="0 0 64 64" role="img" aria-label="Rooster logo"><circle cx="32" cy="32" r="31" fill="#C8102E"/><path d="M14 40c-4-8 0-18 6-20-2 6 0 10 4 12z" fill="#1B1245"/><ellipse cx="30" cy="40" rx="13" ry="11" fill="#fff"/><circle cx="38" cy="24" r="8" fill="#fff"/><circle cx="35" cy="14" r="3" fill="#1B1245"/><circle cx="39" cy="13" r="3" fill="#1B1245"/><circle cx="43" cy="15" r="3" fill="#1B1245"/><path d="M45 23l9 3-9 3z" fill="#FFB400"/><circle cx="40" cy="23" r="1.6" fill="#1B1245"/><path d="M24 50l-2 8m10-8l1 8" stroke="#FFB400" stroke-width="2.5" stroke-linecap="round"/></svg><span>Cock Brand<small>Available here</small></span></div>
+    <span class="sale">Diwali season stock now available</span>
+    <h1 id="top">Light up your <em>Diwali</em></h1>
+    <p class="hindi">इस दिवाली, पूरे परिवार के लिए पटाखे।</p>
+    <p>Sparklers, flower pots, chakris, rockets and gift boxes for every age. Order on WhatsApp and pick up from the shop.</p>
+    <p class="addr">📍 Maharshi University Road, Sector 110, Noida</p>
+    <div class="btns">
+      <a class="btn main" href="https://wa.me/910000000000?text=Hi%2C%20I%20want%20to%20order%20crackers">Order on WhatsApp</a>
+      <a class="btn alt" href="#products">See what we sell</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <svg class="shop" viewBox="0 0 600 320" role="img" aria-label="Raghav Crackers shop with crackers on display"><defs><pattern id="st" width="60" height="46" patternUnits="userSpaceOnUse" x="30"><rect width="30" height="46" fill="#FFB400"/></pattern></defs><rect width="600" height="320" fill="#1B1245"/><g fill="#FFB400"><circle cx="60" cy="30" r="2"/><circle cx="130" cy="14" r="1.5"/><circle cx="480" cy="26" r="2"/><circle cx="550" cy="46" r="1.5"/><circle cx="90" cy="60" r="1.5"/></g><rect x="40" y="100" width="520" height="200" fill="#2B1F6B"/><rect x="30" y="70" width="540" height="46" fill="#C8102E"/><rect x="30" y="70" width="540" height="46" fill="url(#st)"/><rect x="185" y="16" width="230" height="46" rx="8" fill="#FFB400"/><text x="300" y="47" text-anchor="middle" font-family="Bowlby One,Arial Black,sans-serif" font-size="22" fill="#1B1245">Raghav Crackers</text><rect x="60" y="162" width="480" height="8" fill="#8A5A2B"/><rect x="60" y="222" width="480" height="8" fill="#8A5A2B"/><path d="M90 162h34l-4-34h-26z" fill="#FFB400"/><path d="M150 162h34l-4-34h-26z" fill="#C8102E"/><path d="M210 162h34l-4-34h-26z" fill="#2FB36B"/><g fill="#fff"><rect x="300" y="108" width="8" height="54"/><rect x="335" y="98" width="8" height="64"/><rect x="370" y="112" width="8" height="50"/><rect x="405" y="102" width="8" height="60"/></g><g fill="#C8102E"><path d="M300 108h8l-4-14z"/><path d="M335 98h8l-4-14z"/><path d="M370 112h8l-4-14z"/><path d="M405 102h8l-4-14z"/></g><g stroke="#FFB400" stroke-width="3" stroke-linecap="round"><path d="M455 162l6-40M468 162l2-44M481 162l-3-42M494 162l-8-38"/></g><rect x="80" y="192" width="62" height="30" fill="#C8102E"/><rect x="80" y="202" width="62" height="6" fill="#FFB400"/><rect x="152" y="186" width="70" height="36" fill="#FFB400"/><rect x="232" y="194" width="62" height="28" fill="#2FB36B"/><rect x="304" y="188" width="80" height="34" fill="#7B2CBF"/><rect x="394" y="192" width="70" height="30" fill="#C8102E"/><rect x="394" y="202" width="70" height="6" fill="#FFB400"/><g stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M480 222l4-34M492 222l0-36M504 222l-4-34"/></g><rect x="40" y="262" width="520" height="38" fill="#C8102E"/><rect x="0" y="300" width="600" height="20" fill="#0B0724"/></svg>
+  </section>
+
+  <section id="products">
+    <h2>What we sell</h2>
+    <p class="sub">Cock Brand crackers available. Ask at the shop or on WhatsApp for today’s rates and stock.</p>
+    <div class="grid">
+      <div class="item"><h3>Sparklers</h3><p class="hi">फुलझड़ी</p><p>Colour and gold sparklers in short and long sizes.</p></div>
+      <div class="item"><h3>Flower pots</h3><p class="hi">अनार</p><p>Fountain-style pots in small, medium and big boxes.</p></div>
+      <div class="item"><h3>Chakris</h3><p class="hi">चकरी</p><p>Ground spinners that light up the whole courtyard.</p></div>
+      <div class="item"><h3>Rockets</h3><p class="hi">रॉकेट</p><p>Sky rockets with bright colours and whistles.</p></div>
+      <div class="item"><h3>Fancy sky shots</h3><p class="hi">आसमानी आतिशबाज़ी</p><p>Multi-colour shots for terraces and open grounds.</p></div>
+      <div class="item"><h3>Kids’ crackers</h3><p class="hi">बच्चों के पटाखे</p><p>Low-noise options like pop-pops, snake tablets and mini sparklers.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Gift and family boxes</h2>
+    <p class="sub">Ready-made boxes so you don’t have to pick item by item.</p>
+    <div class="combos">
+      <div class="combo"><h3>Family box</h3><p>A mix of pots, chakris, sparklers and rockets for the whole family.</p><a href="https://wa.me/910000000000?text=Hi%2C%20I%20want%20the%20Family%20box">Ask for price</a></div>
+      <div class="combo"><h3>Kids’ box</h3><p>Safe, low-noise crackers picked for younger children.</p><a href="https://wa.me/910000000000?text=Hi%2C%20I%20want%20the%20Kids%20box">Ask for price</a></div>
+      <div class="combo"><h3>Gift box</h3><p>A neat box you can give to relatives, staff and neighbours.</p><a href="https://wa.me/910000000000?text=Hi%2C%20I%20want%20the%20Gift%20box">Ask for price</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="safe">
+      <h2>Burst crackers safely</h2>
+      <ul>
+        <li>Light crackers only in an open area, away from houses, vehicles and dry leaves.</li>
+        <li>Keep a bucket of water nearby, and children always with an adult.</li>
+        <li>Light one at a time, and never relight one that did not go off. Pour water on it.</li>
+        <li>Wear cotton clothes, and keep loose dupattas and sarees away from the fire.</li>
+        <li>Follow your city’s rules on which crackers are allowed and when you can burst them.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Visit the shop</h2>
+    <p class="sub">Message us before you come so we can keep your items ready.</p>
+    <div class="contact">
+      <div class="card">
+        <h3>Find us</h3>
+        <p><strong>Raghav Crackers</strong></p>
+        <p>Maharshi University Road, Sector 110, Noida</p>
+        <p>Phone: <a href="tel:+910000000000">+91 00000 00000</a></p>
+        <p>Licence no.: add here</p>
+      </div>
+      <div class="card">
+        <h3>Opening hours</h3>
+        <p>Every day in the festive season: 10:00 AM to 9:00 PM</p>
+        <p class="note">Phone, licence number and hours are sample details. Replace them with the real ones.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Raghav Crackers. Happy Diwali!</div></footer>
+</body>
+</html>
